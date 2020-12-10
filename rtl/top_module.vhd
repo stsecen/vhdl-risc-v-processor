@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 use work.constants.all;
 use work.components.all;
 
-entity mc2020gtu is
+entity top_module is
     generic (
         TEST_ENABLE : boolean := true
     );
@@ -17,9 +17,9 @@ entity mc2020gtu is
         o_test : out std_logic_vector(XLEN_1 downto 0)
         
     );
-end entity mc2020gtu;
+end entity top_module;
 
-architecture behavioral of mc2020gtu is
+architecture behavioral of top_module is
     
     signal s_instruction : std_logic_vector(XLEN_1 downto 0);
     signal s_pc : std_logic_vector(XLEN_1 downto 0);
